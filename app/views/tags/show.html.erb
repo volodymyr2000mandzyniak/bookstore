@@ -1,0 +1,7 @@
+<h1><%= @tag.name %></h1>
+
+<%if @tag.books.empty? %>
+	<h2> Книг нема </h2>
+<% else %>
+ <%= render @tag.books %>
+<% end %>`

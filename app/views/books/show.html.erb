@@ -1,0 +1,31 @@
+<%= render 'shared/breadcrumb', category: @book.category %>
+<article class="book">
+  <section class='book-head'>
+    <h1><%= @book.title %></h1>
+		<small>
+			<time><%= @book.created_at.to_date.strftime("%d %B %Y")%></time>
+			 <% if @book.category.present? %>
+			  |
+			  <%= link_to @book.category.name, @book.category %>
+			 <% end %> 
+			<% if user_signed_in? && current_user.admin?%>
+				|
+				<%= link_to 'редагувати', edit_admin_book_path(@book)%>
+				|
+				<%= link_to 'видалити', admin_book_path(@book), method: :delete, data: { confirm: 'Ви впевнені' }%>
+			<% end %>
+		</small>
+  </section>
+    
+  <section class='book-summury'>
+		<%= image_tag @book.image.url(:large), class: 'img-show' if @book.image? %>	
+		<%= @book.body %>
+    <%# <%= @book.body.html_safe %> 
+  </section>
+</article>
+
+
+
+
+
+

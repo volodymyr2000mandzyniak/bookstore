@@ -1,0 +1,8 @@
+<%= render 'shared/breadcrumb', category: @category %>
+<h1><%=@category.name %></h1>
+
+<section id='books'>
+    <%= render @books %>
+</section>
+
+<%= will_paginate @books, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>

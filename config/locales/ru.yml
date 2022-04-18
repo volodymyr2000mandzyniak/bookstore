@@ -1,0 +1,25 @@
+ru:
+  common:
+    errors: "При заповнені форми виникла помилка"
+    back: "Назад"
+  books:
+    index:
+      title: "Книги"
+
+  admin:
+    books:
+      new:
+        title: "Додати книгу"
+      edit:
+        title: "Редагувати книгу"
+      form:
+        submit: "%{action} книга "
+    categories:
+      index:
+        name: "Категорія"
+      new:
+        title: "Додати категорію"
+      edit:
+        title: "Редагувати категорію"
+      form:
+        submit: "%{action} категорія "

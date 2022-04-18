@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    models:
+      book: "Книга"
+    attributes:
+      book:
+        title: "Назва книги"
+        summary: "Автор"
+        body: "Текст книги"
+        all_tags: "Автори"
+      category:
+        title: "Додати категорію"
+        parent_id: "Батьківська Категорія"
+    errors:
+      messages:
+        blank: "Не може бути пустим"
